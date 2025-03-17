@@ -28,7 +28,7 @@
         }
         .hero-image {
             width: 100%;
-            height: auto;
+            height: 650px;
         }
         section {
             padding: 20px;
@@ -148,6 +148,32 @@
             margin-top: 5px;
             color: #1856b3;
         }
+#what-we-offer {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.offer-card {
+    background: #1856b3;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
 @media (max-width: 768px) {
         header {
         flex-direction: row; /* Ensures the items remain on the same row */
@@ -159,6 +185,10 @@
     table, thead, tbody, th, td, tr {
         display: block;
     }
+    .hero-image {
+            width: 100%;
+            height: auto;
+}
     h2 {
         font-size: 16px;
     }
@@ -300,6 +330,18 @@
                     <!-- Data will be inserted here -->
                 </tbody>
             </table>
+        </div>
+    </section>
+    <section id="what-we-offer">
+        <h2>What We Offer</h2>
+        <div class="offer-grid">
+            <div class="offer-card">⚽ Multi and Single Bets</div>
+            <div class="offer-card">🎯 Correct Scores</div>
+            <div class="offer-card">🏆 SportPesa Mega Jackpot</div>
+            <div class="offer-card">🥇 SportPesa Midweek Jackpot</div>
+            <div class="offer-card">💰 Betika Jackpot Tips</div>
+            <div class="offer-card">🔥 Shabiki Supa Jackpot</div>
+            <div class="offer-card">🎖️ Mozzart Grand Jackpot</div>
         </div>
     </section>
     <section id="testimonials">
