@@ -406,6 +406,29 @@
     </footer>
     <button class="floating-button" onclick="window.location.href='https://t.me/yourtelegramlink'">
         <i class="fab fa-telegram-plane"></i>
-    </button>    
+    </button>
+<a href="https://betsuretips.vercel.app" onclick="trackClick(event, 'landing_page')" target="_blank">Visit BetSure</a>
+
+<script>
+  async function trackClick(event, type) {
+    event.preventDefault(); // Prevent immediate navigation
+
+    try {
+      const response = await fetch("/api/track-click", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type })
+      });
+
+      // Wait for the response, then proceed to the link
+      setTimeout(() => {
+        window.open("https://betsuretips.vercel.app", "_blank");
+      }, 500); // Small delay to ensure tracking completes
+    } catch (error) {
+      console.error("Error tracking click:", error);
+      window.open("https://betsuretips.vercel.app", "_blank"); // Fallback in case of an error
+    }
+  }
+</script>
 </body>
 </html>
