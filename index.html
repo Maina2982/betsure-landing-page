@@ -297,9 +297,8 @@
 <body>
     <header>
         <img src="logo.png" alt="BetSure Logo" class="logo">
-        <button class="blink" id="headbtn">Download App</button>
+        <button class="blink" id="headbtn" onclick="trackClick(event, 'landing_page')">Download App</button>
     </header>
-    
     <img src="landingp.jpeg" alt="Football Betting Excitement" class="hero-image">
     <section id="why-us">
         <h2>Why Choose BetSure?</h2>
@@ -311,7 +310,7 @@
             <p>✅ <strong>Daily Updates</strong> – Fresh predictions every day, keeping you ahead.</p>
             <p>✅ <strong>Easy to Use</strong> – Simple, user-friendly platform for all bettors.</p>
         </ul>
-        <button id="bodybtn">Check App</button>
+        <button id="bodybtn" onclick="trackClick(event, 'landing_page')">Check App</button>
     </section>
     
     <section id="previous-wins">
@@ -396,10 +395,8 @@
             <p>⚽ <strong>Get Predictions</strong> – Access expert football betting tips daily.</p>
             <p>💰 <strong>Place Your Bets</strong> – Use our accurate predictions to maximize your winnings.</p>
         </ol>
-        <button id="bodybtn">Explore App</button>
+        <button id="bodybtn" onclick="trackClick(event, 'landing_page')">Explore App</button>
     </section>
-
-<a href="https://betsuretips.vercel.app" onclick="trackClick(event, 'landing_page')" target="_blank">Visit BetSure</a>
 <script>
   async function trackClick(event, type) {
     event.preventDefault(); // Prevent immediate navigation
