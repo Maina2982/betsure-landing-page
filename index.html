@@ -307,7 +307,7 @@
 <body>
     <header>
         <img src="logo.png" alt="BetSure Logo" class="logo">
-        <button class="blink" id="headbtn" onclick="trackClick(event, 'landing_page')">Download App</button>
+        <button class="blink" id="headbtn" onclick="trackButtonClick()">Download App</button>
     </header>
     <img src="landingp.jpeg" alt="Football Betting Excitement" class="hero-image">
     <section id="why-us">
@@ -320,7 +320,7 @@
             <p>✅ <strong>Daily Updates</strong> – Fresh predictions every day, keeping you ahead.</p>
             <p>✅ <strong>Easy to Use</strong> – Simple, user-friendly platform for all bettors.</p>
         </ul>
-        <button id="bodybtn" onclick="trackClick(event, 'landing_page')">Check App</button>
+        <button id="bodybtn" onclick="trackButtonClick()">Check App</button>
     </section>
     
     <section id="previous-wins">
@@ -405,26 +405,8 @@
             <p>⚽ <strong>Get Predictions</strong> – Access expert football betting tips daily.</p>
             <p>💰 <strong>Place Your Bets</strong> – Use our accurate predictions to maximize your winnings.</p>
         </ol>
-        <button id="bodybtn" onclick="trackClick(event, 'landing_page')">Explore App</button>
+        <button id="bodybtn" onclick="trackButtonClick()">Explore App</button>
     </section>
-<script>
-  async function trackClick(event, type) {
-    event.preventDefault(); // Prevent immediate navigation
-    try {
-      const response = await fetch("https://betsurebackend.onrender.com/api/track-click", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type })
-      });
-      // Wait for the response, then proceed to the link
-      setTimeout(() => {
-        window.open("https://betsuretips.vercel.app", "_blank");
-      }, 500); // Small delay to ensure tracking completes
-    } catch (error) {
-      console.error("Error tracking click:", error);
-    }
-  }
-</script>
     <footer>
         <p>&copy; 2025 BetSure. All Rights Reserved.</p>
         <div class="disclaimer">
