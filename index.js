@@ -5,6 +5,7 @@ function getAffiliateCode() {
     const affiliateCode = parseInt(urlParts, 10); // Convert to integer
     if (isNaN(affiliateCode)) return null; // Invalid format
     console.log("Extracted Affiliate Code:", affiliateCode); // Debugging log
+    localStorage.setItem("affiliate_code", affiliateCode); // Replace with actual code
     return affiliateCode;
 }
 document.addEventListener("DOMContentLoaded", function () {
