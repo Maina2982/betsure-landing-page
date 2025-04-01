@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error fetching data:", error));
 });
-
 // Extract affiliate code from the query string
 function getAffiliateCode() {
     const params = new URLSearchParams(window.location.search);
