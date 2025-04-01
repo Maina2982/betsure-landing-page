@@ -69,6 +69,6 @@ async function trackClick() {
 }
 // Run the function when the page fully loads
 window.onload = () => {
-    console.log("Page fully loaded, tracking click...");
-    trackClick();
+console.log("Page fully loaded, tracking click...");
+trackClick();
 };
