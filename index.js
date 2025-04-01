@@ -1,5 +1,6 @@
+const BASE_URL = "https://betsurebackend.onrender.com";
 document.addEventListener("DOMContentLoaded", function () {
-    fetch(`${BACKEND_URL}/tips/wins`)
+    fetch(`${BASE_URL}/tips/wins`)
         .then(response => response.json())
         .then(data => {
             const tableBody = document.getElementById("tips-table");
@@ -17,9 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     headerRow.appendChild(th);
                 });
             }
-
             tableBody.innerHTML = ""; // Clear previous data
-
             // Populate table rows
             data.forEach(tip => {
                 const row = document.createElement("tr");
@@ -56,7 +55,7 @@ async function trackClick() {
         const ip_address = data.ip;
         console.log("User IP Address:", ip_address); // Debugging log
         // Send data to backend
-        const trackResponse = await fetch("https://betsurebackend.onrender.com/track-click", {
+        const trackResponse = await fetch(`${BASE_URL}/track-click`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ affiliate_code, ip_address })
