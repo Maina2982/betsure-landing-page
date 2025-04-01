@@ -34,13 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error fetching data:", error));
 });
-// Extract affiliate code from the query string
-function getAffiliateCode() {
-    const params = new URLSearchParams(window.location.search);
-    const affiliateCode = params.get('affiliate_code'); 
-    console.log("Extracted Affiliate Code:", affiliateCode); // Debugging log
-    return affiliateCode;
-}
+
+// Function to extract affiliate code from URL (assuming format: ?1)
 async function trackClick() {
     const affiliate_code = getAffiliateCode();
     if (!affiliate_code) {
