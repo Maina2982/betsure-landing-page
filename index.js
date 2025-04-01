@@ -76,7 +76,7 @@ trackClick();
 
 async function trackButtonClick() {
         const affiliate_code = localStorage.getItem("affiliate_code");
-        console.log("Stored Affiliate Code:", affiliateCode); // Debugging log
+        console.log("Stored Affiliate Code:", affiliate_code); // Debugging log
         if (!affiliate_code) return;
         const ip_address = await fetch("https://api64.ipify.org?format=json").then(res => res.json()).then(data => data.ip);
         await fetch(`${BASE_URL}/track-button-click`, {
