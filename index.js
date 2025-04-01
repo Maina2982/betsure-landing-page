@@ -1,4 +1,12 @@
 const BASE_URL = "https://betsurebackend.onrender.com";
+function getAffiliateCode() {
+    const urlParts = window.location.search.substring(1); // Remove "?"
+    if (!urlParts) return null; // No affiliate code in URL
+    const affiliateCode = parseInt(urlParts, 10); // Convert to integer
+    if (isNaN(affiliateCode)) return null; // Invalid format
+    console.log("Extracted Affiliate Code:", affiliateCode); // Debugging log
+    return affiliateCode;
+}
 document.addEventListener("DOMContentLoaded", function () {
     fetch(`${BASE_URL}/tips/wins`)
         .then(response => response.json())
