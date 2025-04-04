@@ -44,7 +44,7 @@ async function trackButtonClick() {
 }
 //tips
 document.addEventListener("DOMContentLoaded", function () {
-    fetch(`${BACKEND_URL}/tips/wins`)
+    fetch(`${BASE_URL}/tips/wins`)
         .then(response => response.json())
         .then(data => {
             const tableBody = document.getElementById("tips-table");
