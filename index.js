@@ -23,7 +23,6 @@ async function trackClick() {
             body: JSON.stringify({ affiliate_code, ip_address })
         });
         const trackData = await trackResponse.json();
-        console.log("Tracking Response:", trackData); // Debugging log
     } catch (err) {
         console.error("Error tracking click:", err);
     }
