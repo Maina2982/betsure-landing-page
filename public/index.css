@@ -50,7 +50,7 @@ section {
         margin-right: 7px;
         cursor: pointer;
         border-radius: 20px;
-        animation: blink 1.5s infinite;
+        animation: blink 4s infinite;
         }
 @keyframes blink {
         50% { opacity: 0; }
