@@ -42,7 +42,7 @@ section {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 #headbtn {
-        background-color: #F7AE08;
+        background-color: #FFFF00;
         color: rgb(10, 10, 10);
         border: 2px solid rgb(2, 187, 2);
         padding: 10px 20px;
@@ -50,7 +50,6 @@ section {
         margin-right: 7px;
         cursor: pointer;
         border-radius: 20px;
-        animation: blink 4s infinite;
         }
 @keyframes blink {
         50% { opacity: 0; }
