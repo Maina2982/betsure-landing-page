@@ -30,16 +30,28 @@ async function trackClick() {
 window.onload = () => {
 trackClick();
 };
-//Check Button Clicks
+// Check Button Clicks
 async function trackButtonClick() {
-        const affiliate_code = localStorage.getItem("affiliate_code");
-        if (!affiliate_code) return;
-        const ip_address = await fetch("https://api64.ipify.org?format=json").then(res => res.json()).then(data => data.ip);
+    const affiliate_code = localStorage.getItem("affiliate_code");
+    if (!affiliate_code) {
+        // Even if no affiliate code, still redirect
+        window.location.href = "https://betsuretips.onrender.com/betsure.apk";
+        return;
+    }
+    try {
+        const ip_address = await fetch("https://api64.ipify.org?format=json")
+            .then(res => res.json())
+            .then(data => data.ip);
         await fetch(`${BASE_URL}/track-button-click`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ affiliate_code, ip_address })
-            });
+        });
+    } catch (error) {
+        console.error("Tracking failed:", error);
+    }
+    // Redirect after tracking is complete
+    window.location.href = "https://betsuretips.onrender.com/betsure.apk";
 }
 //tips
 document.addEventListener("DOMContentLoaded", function () {
