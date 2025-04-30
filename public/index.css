@@ -227,41 +227,38 @@ footer {
     }
     td {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         border: none;
         font-size: 0.9em;
         padding: 4px;
     }
-    td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        color: #111111;
-        flex: 1;
-        text-transform: capitalize;
+    .td-content {
+        width: 100%;
+        text-align: left;
     }
-    /* Style the Match name to stand out */
-    td[data-label="match"] {
+   /* Style the Match name to stand out */
+    td[data-label="match"] .td-content {
         font-size: 13px;
-        font-weight: 400;
+        font-weight: 500;
         color: #1856b3;
         text-align: left;
     }
-    td[data-label="tip"] {
-        font-size: 14px;
+    td[data-label="tip"] .td-content {
+        font-size: 13px;
         font-weight: 400;
-        color: #ff0000;
+        color: #ee0000;
         text-align: left;
     }
-    td[data-label="odds"]{
-        text-align: left;
+    td[data-label="outcome"] .td-content {
+        font-size: 13px;
+        font-weight: 400;
+        color: #06a606;
+        text-align: right;
     }
-    td[data-label="date"]{
+        td[data-label="odds"] .td-content {
+        font-size: 13px;
+        font-weight: 400;
         text-align: left;
-    }
-    td[data-label="outcome"]{
-        text-align: left;
-        Color:rgb(8, 204, 8);
-        font-size: 0.9em;
     }
     /* 📌 ALTERNATING CARD COLORS */
     tr:nth-child(odd) {
