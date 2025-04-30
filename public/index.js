@@ -76,11 +76,11 @@ document.addEventListener("DOMContentLoaded", function () {
             data.forEach(tip => {
                 const row = document.createElement("tr");
                 row.innerHTML = `
-                   <td data-label="date">${tip.date}</td>
-                    <td data-label="match">${tip.match}</td>
-                    <td data-label="tip">${tip.tip}</td>
-                    <td data-label="odds">${tip.odds}</td>
-                    <td data-label="outcome">${tip.outcome}</td>
+              <td data-label="outcome"><div class="td-content">${tip.outcome}</div></td>
+              <td data-label="date"><div class="td-content">${tip.date}</div></td>
+              <td data-label="match"><div class="td-content">${tip.match}</div></td>
+              <td data-label="tip"><div class="td-content">${tip.tip}</div></td>
+              <td data-label="odds"><div class="td-content">${tip.odds}</div></td>
                 `;
                 tableBody.appendChild(row);
             });
