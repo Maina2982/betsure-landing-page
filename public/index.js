@@ -51,7 +51,7 @@ async function trackButtonClick() {
         console.error("Tracking failed:", error);
     }
     // Redirect after tracking is complete
-    window.location.href = "https://betsuretips.onrender.com/betsure.apk";
+    window.location.href = "https://tipstar.win/tipstar.apk";
 }
 //tips
 document.addEventListener("DOMContentLoaded", function () {
