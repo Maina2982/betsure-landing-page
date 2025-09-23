@@ -211,6 +211,12 @@ footer {
         cursor: pointer;
         border-radius: 7px;
       }
+      #why-us h2 {
+            color: #F0A730;
+      }
+      #why-us p {
+            colour:#fff;
+      }
     * {
     font-family: Arial, sans-serif;
 }
