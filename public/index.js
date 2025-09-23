@@ -35,7 +35,7 @@ async function trackButtonClick() {
     const affiliate_code = localStorage.getItem("affiliate_code");
     if (!affiliate_code) {
         // Even if no affiliate code, still redirect
-        window.location.href = "https://betsuretips.onrender.com/tipstar.apk";
+        window.location.href = "https://tipstar.win/tipstar.apk";
         return;
     }
     try {
