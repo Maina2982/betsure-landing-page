@@ -203,6 +203,7 @@ footer {
     #why-us {
       background: #1856b3;
       border-radius: 0;
+      margin-top: 0 !important;
     }
       #how-to-install {
             border-radius: 0;
