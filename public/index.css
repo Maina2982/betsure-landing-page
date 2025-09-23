@@ -161,8 +161,6 @@ footer {
 }
 @media (max-width: 768px) {
         header {
-        flex-direction: row; /* Ensures the items remain on the same row */
-        justify-content: space-between;
         position: sticky;
         top: 0;
         z-index: 1000;
@@ -179,7 +177,7 @@ footer {
         padding: 15px;
     }
     .logo {
-        height: 100px; /* Adjust logo size for mobile */
+        height: 90px; /* Adjust logo size for mobile */
         margin-bottom: 0;
     }
 
