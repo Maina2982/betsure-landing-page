@@ -35,7 +35,7 @@ async function trackButtonClick() {
     const affiliate_code = localStorage.getItem("affiliate_code");
     if (!affiliate_code) {
         // Even if no affiliate code, still redirect
-        window.location.href = "https://tipstar.win/tipstar.apk";
+        window.location.href = "https://tipstar.win/public/tipstar.apk";
         return;
     }
     try {
@@ -51,7 +51,7 @@ async function trackButtonClick() {
         console.error("Tracking failed:", error);
     }
     // Redirect after tracking is complete
-    window.location.href = "https://tipstar.win/tipstar.apk";
+    window.location.href = "https://tipstar.win/public/tipstar.apk";
 }
 //tips
 document.addEventListener("DOMContentLoaded", function () {
