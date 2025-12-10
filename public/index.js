@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <td data-label="outcome"><div class="td-content">${tip.outcome}</div></td>
               <td data-label="date"><div class="td-content">${tip.date}</div></td>
               <td data-label="match"><div class="td-content">${tip.match}</div></td>
-              <td data-label="tip"><div class="td-content">${tip.tip}</div></td>
+              <td data-label="tip"><div class="td-content">${tip.tips}</div></td>
               <td data-label="odds"><div class="td-content">${tip.odds}</div></td>
                 `;
                 tableBody.appendChild(row);
