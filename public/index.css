@@ -225,6 +225,26 @@ footer {
     * {
     font-family: Arial, sans-serif;
 }
+
+.outcome {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.outcome.won {
+  color: #28a745; /* green */
+}
+
+.outcome.lost {
+  color: #dc3545; /* red */
+}
+
+.outcome.pending {
+  color: #ffc107; /* yellow */
+}
+      
     table, thead, tbody, th, td, tr {
         display: block;
     }
