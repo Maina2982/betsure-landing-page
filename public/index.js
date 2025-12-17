@@ -55,6 +55,29 @@ async function trackButtonClick() {
 }
 //tips
 document.addEventListener("DOMContentLoaded", function () {
+    function formatOutcome(outcome) {
+      switch (outcome) {
+        case "check":
+          return `
+            <span class="outcome won">
+              <i class="fa fa-check-circle"></i> Won
+            </span>
+          `;
+        case "cross":
+          return `
+            <span class="outcome lost">
+              <i class="fa fa-times-circle"></i> Lost
+            </span>
+          `;
+        case "dash":
+        default:
+          return `
+            <span class="outcome pending">
+              <i class="fa fa-minus-circle"></i> Pending
+            </span>
+          `;
+      }
+    }
     fetch(`${BASE_URL}/tips/wins`)
         .then(response => response.json())
         .then(data => {
@@ -75,12 +98,16 @@ document.addEventListener("DOMContentLoaded", function () {
             // Populate table rows
             data.forEach(tip => {
                 const row = document.createElement("tr");
-                row.innerHTML = `
-              <td data-label="outcome"><div class="td-content">${tip.outcome}</div></td>
-              <td data-label="date"><div class="td-content">${tip.date}</div></td>
-              <td data-label="match"><div class="td-content">${tip.match}</div></td>
-              <td data-label="tip"><div class="td-content">${tip.tips}</div></td>
-              <td data-label="odds"><div class="td-content">${tip.odds}</div></td>
+                 row.innerHTML = `
+                  <td data-label="date"><div class="td-content">${tip.date}</div></td>
+                  <td data-label="match"><div class="td-content">${tip.match}</div></td>
+                  <td data-label="tip"><div class="td-content">${tip.tips}</div></td>
+                  <td data-label="odds"><div class="td-content">${tip.odds}</div></td>
+                  <td data-label="outcome">
+                    <div class="td-content">
+                      ${formatOutcome(tip.outcome)}
+                    </div>
+                  </td>
                 `;
                 tableBody.appendChild(row);
             });
