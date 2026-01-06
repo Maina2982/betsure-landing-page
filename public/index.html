@@ -7,6 +7,323 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
+<style>
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      font-size: 14px;
+        }
+header {
+        background-color: #1856b3;
+        color: white;
+        padding: 0 5px 0 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+.logo {
+        height: 60px;
+        }
+.hero-image {
+        width: 100%;
+        height: 650px;
+        }
+section {
+        padding: 20px;
+        margin: 20px auto;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 90%;
+        }
+#bodybtn {
+        background-color: #1856b3;
+        color: yellow;
+        border: 2px solid yellow;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+#headbtn {
+        background-color: #dbdbdb;
+        color: rgb(10, 10, 10);
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-right: 7px;
+        cursor: pointer;
+        border-radius: 20px;
+        }
+@keyframes blink {
+        50% { opacity: 0; }
+        }
+.floating-button {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+.floating-button i {
+    font-size: 24px;
+}
+.floating-button {
+    animation: none;
+        }
+footer {
+    background-color: #1856b3;
+    color: yellow;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    }
+.disclaimer {
+    font-size: 14px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+.disclaimer img {
+    width: 30px;
+    margin-left: 10px;
+    }
+.testimonial-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    max-width: 500px;
+    }
+.testimonial-avatar {
+    width: 40px;
+    height: 40px;
+    background: #1856b3;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    }
+#how-to-install ol {
+    text-align: left;
+    max-width: 400px;
+    margin: 0;
+    padding-left: 20px;
+    }
+#how-to-install button {
+    margin-top: 15px;
+    }
+.testimonial-content {
+    text-align: left;
+    }
+.testimonial-name {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #1856b3;
+    }
+#what-we-offer {
+    background: white;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 90%;
+    margin: 20px auto;
+}
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+.offer-card {
+    background: #1856b3;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+@media (max-width: 768px) {
+        header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .hero-image {
+            width: 100%;
+            height: auto;
+}
+    h2 {
+        font-size: 16px;
+    }
+    .blink {
+        font-size: 14px; /* Adjust button size for smaller screens */
+        padding: 15px;
+    }
+    .logo {
+        height: 90px; /* Adjust logo size for mobile */
+        margin-bottom: 0;
+    }
+
+    .testimonial-card {
+        flex-direction: row;
+        text-align: left;
+        padding: 15px;
+    }
+    .testimonial-avatar {
+        margin-right: 10px;
+        width: 70px;
+        height: 40px;
+    }
+    #previous-wins, #testimonials {
+        max-width: 100%;
+        margin: 8px;
+        padding: 5px 1px 5px 1px;
+    }
+    button {
+        width: 50%;
+        padding: 12px;
+    }
+    #why-us {
+      background: #1856b3;
+      border-radius: 0;
+      margin-top: 0 !important;
+    }
+      #how-to-install {
+            border-radius: 0;
+      }
+      #why-us button {
+        background-color: #dbdbdb;
+        color: rgb(10, 10, 10);
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 7px;
+      }
+      #why-us h2 {
+            color: #F0A730;
+      }
+      #why-us p {
+            color: #fff;
+      }
+    * {
+    font-family: Arial, sans-serif;
+}
+
+.outcome {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.outcome.won {
+  color: #28a745; /* green */
+}
+
+.outcome.lost {
+  color: #dc3545; /* red */
+}
+
+.outcome.pending {
+  color: #ffc107; /* yellow */
+}
+      
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead {
+        display: none; /* Hide table header */
+    }
+    tr {
+        margin-bottom: 5px;
+        padding: 15px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        transition: transform 0.2s ease-in-out;
+    }
+    tr:hover {
+        transform: scale(1.02); /* Slight zoom on hover */
+    }
+    td {
+        display: flex;
+        justify-content: flex-start;
+        border: none;
+        font-size: 0.9em;
+        padding: 4px;
+    }
+    .td-content {
+        width: 100%;
+        text-align: left;
+    }
+   /* Style the Match name to stand out */
+    td[data-label="match"] .td-content {
+        font-size: 13px;
+        font-weight: 500;
+        color: #1856b3;
+        text-align: left;
+    }
+    td[data-label="tip"] .td-content {
+        font-size: 13px;
+        font-weight: 400;
+        color: #ee0000;
+        text-align: left;
+    }
+    td[data-label="outcome"] .td-content {
+        font-size: 13px;
+        font-weight: 400;
+        color: #06a606;
+        text-align: right;
+    }
+        td[data-label="odds"] .td-content {
+        font-size: 13px;
+        font-weight: 400;
+        text-align: left;
+    }
+    /* 📌 ALTERNATING CARD COLORS */
+    tr:nth-child(odd) {
+        background-color: #f1f1f1; /* White background for odd rows */
+    }
+    tr:nth-child(even) {
+        background-color: #ffffff; /* Light gray for even rows */
+    }
+    /* 📌 Outcome Badge Styling */
+    .outcome-badge {
+        padding: 6px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+        min-width: 80px;
+    }
+}
+</style>
 </head>
 <body>
     <header>
@@ -117,5 +434,6 @@
     <button class="floating-button" onclick="window.location.href='https://t.me/bs_customercare'">
         <i class="fab fa-telegram-plane"></i>
     </button>
+
 </body>
 </html>
