@@ -208,7 +208,7 @@
 
         /* Why Us Section */
         #why-us {
-            background: rgba(255, 255, 255, 0.05);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             border-radius: var(--radius);
             padding: 40px;
             margin: 40px auto;
@@ -225,6 +225,17 @@
             right: 0;
             height: 4px;
             background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+
+        #why-us h3 {
+            font-size: 1.6rem;
+            line-height: 1.6;
+        }
+
+        #why-us .center-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
         }
 
     /* Stats Grid Section */
@@ -818,7 +829,7 @@
 
         /* CTA Buttons */
         .btn {
-            padding: 14px 28px;
+            padding: 14px 18px;
             border-radius: var(--radius);
             font-weight: 600;
             font-size: 1rem;
@@ -858,7 +869,7 @@
         }
 
         /* Floating Action Button */
-        .fab {
+       .tele .fab {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -878,7 +889,7 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        .fab:hover {
+        .tele .fab:hover {
             transform: scale(1.1) rotate(90deg);
             box-shadow: 0 8px 30px rgba(0, 136, 204, 0.6);
         }
@@ -987,7 +998,7 @@
                 gap: 10px;
             }
             
-            .fab {
+            .tele .fab {
                 bottom: 15px;
                 right: 15px;
                 width: 55px;
@@ -1050,6 +1061,124 @@
             
             .match-value {
                 font-size: 1rem;
+            }
+        }
+
+        /* Telegram Channel Section - Simple */
+        #telegram-channel {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .new-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            width: fit-content;
+            margin: 0 auto 15px auto;
+        }
+
+        .telegram-simple {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 20px;
+            border: 1px solid rgba(0, 136, 204, 0.1);
+        }
+
+        .telegram-icon-simple {
+            width: 35px;
+            height: 35px;
+            background: #0088cc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+        }
+
+        .telegram-icon-simple i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .telegram-simple h3 {
+            color: #0088cc;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .simple-list {
+            list-style: none;
+            padding: 0;
+            max-width: 400px;
+            margin: 0 auto 30px auto;
+        }
+
+        .simple-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .simple-list li i {
+            color: #4CAF50;
+        }
+
+        .btn-telegram-simple {
+            background: #0088cc;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-bottom: 15px;
+        }
+
+        .btn-telegram-simple:hover {
+            background: #0077b3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.3);
+        }
+
+        .simple-note {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .telegram-simple {
+                padding: 20px;
+            }
+            
+            .btn-telegram-simple {
+                padding: 12px 20px;
+                font-size: 0.95rem;
             }
         }
 
@@ -1300,9 +1429,9 @@
 
         .btn-calculate {
             margin-top: 10px;
-            padding: 18px;
+            padding: 10px 0;
             font-size: 1.1rem;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--success) 100%);
             color: var(--dark);
             font-weight: 700;
             border: none;
@@ -1543,10 +1672,6 @@
         <div class="hero-overlay">
             <h1 class="hero-title">AI-Powered Football Predictions</h1>
             <p class="hero-subtitle">Forget relying on luck. Our advanced AI analyzes real-time data to deliver the most accurate odds for smarter bets and consistent wins.</p>
-            <button class="btn btn-primary" onclick="trackButtonClick()">
-                <i class="fas fa-rocket"></i>
-                Start Winning Now
-            </button>
         </div>
         <img src="hero.png" alt="Football Betting Predictions" class="hero-image">
     </section>
@@ -1554,8 +1679,14 @@
     <!-- Why Us Section -->
     <section id="why-us" class="fade-in">
         <div class="section-header">
-            <h2>Why Gamble When We Can Predict For You?</h2>
+            <h3>Why Gamble When We Can Predict For You?</h3>
             <p>Join millions who have discovered the smarter way to play with our AI-driven predictions</p>
+        </div>
+        <div class="center-button">
+            <button class="cta-button" onclick="trackButtonClick()">
+                <i class="fas fa-rocket"></i>
+                Start Now
+            </button>
         </div>
     </section>
 
@@ -1777,6 +1908,31 @@
         </div>
     </section>
 
+        <!-- Telegram Channel Section -->
+    <section id="telegram-channel" class="fade-in">
+        <div class="section-header">
+            <div class="new-badge">
+                New
+            </div>
+            <h2>Join Our Telegram Channel</h2>
+            <p>Get betting tips and live updates</p>
+        </div>
+        
+        <div class="telegram-simple">
+            <h3>Why Join?</h3>
+            <ul class="simple-list">
+                <li><i class="fas fa-check-circle"></i> Free betting tips</li>
+                <li><i class="fas fa-check-circle"></i> Live match updates</li>
+            </ul>
+            
+            <div class="telegram-cta">
+                <a href="https://t.me/ssure_tips" target="_blank" class="btn-telegram-simple" onclick="trackTelegramClick()">
+                    <i class="fab fa-telegram"></i> Join Telegram Channel
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- How Profitable is Tipstar? -->
     <section id="profit-calculator" class="fade-in">
         <div class="section-header">
@@ -1878,7 +2034,7 @@
 
                     <button class="btn btn-primary btn-calculate" id="calculateBtn">
                         <i class="fas fa-calculator"></i>
-                        Calculate Potential Profit
+                        Get Profit
                     </button>
                 </div>
 
@@ -2115,8 +2271,10 @@
     </footer>
 
     <!-- Floating Action Button -->
+    <div class="tele">
     <div class="fab" onclick="window.location.href='https://t.me/bs_customercare'">
         <i class="fab fa-telegram-plane"></i>
+    </div>
     </div>
 
     <script>
@@ -2208,19 +2366,31 @@ function initAccordion() {
             // Toggle current accordion
             if (!isActive) {
                 item.classList.add('active');
-                content.style.maxHeight = content.scrollHeight + 'px';
+                
+                // Set a large max-height first
+                content.style.maxHeight = '2000px';
                 
                 // Load games if not already loaded
                 if (!gamesContainer.hasAttribute('data-loaded')) {
-                    loadGamesByCategory(category, gamesContainer);
+                    loadGamesByCategory(category, gamesContainer).then(() => {
+                        // After games load, set the exact height
+                        setTimeout(() => {
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                        }, 100);
+                    });
+                } else {
+                    // If already loaded, set exact height
+                    setTimeout(() => {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }, 10);
                 }
+                
             } else {
                 item.classList.remove('active');
                 content.style.maxHeight = '0';
             }
         });
     });
-    
 }
 
 // Function to load games by category
