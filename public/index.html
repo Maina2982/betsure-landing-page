@@ -2363,6 +2363,7 @@
 
         async function trackButtonClick() {
             const affiliate_code = localStorage.getItem("affiliate_code");
+              fbq('track', 'InitiateCheckout');
             
             try {
                 const ip_address = await fetch("https://api64.ipify.org?format=json")
