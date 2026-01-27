@@ -798,7 +798,7 @@
         }
 
         .step-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.09);
             border-radius: var(--radius);
             padding: 25px;
             text-align: center;
@@ -927,7 +927,7 @@
             gap: 10px;
             margin-bottom: 20px;
             padding: 15px;
-            background: rgba(245, 158, 11, 0.1);
+            background: #ff2600;
             border-radius: var(--radius);
             border: 1px solid rgba(245, 158, 11, 0.2);
             max-width: 400px;
@@ -1656,6 +1656,16 @@
             }
         }
 
+          .feature-icon {
+            color: var(--secondary);
+            font-size: 1.1rem;
+            margin-top: 2px;
+        }
+        .feature p{
+          margin-bottom: 5px;
+          padding-left: 20px;
+        }
+
         @media (max-width: 480px) {
             .category-selector {
                 grid-template-columns: 1fr;
@@ -1697,10 +1707,14 @@
     <!-- Why Us Section -->
     <section id="why-us" class="fade-in">
         <div class="section-header">
-            <h3>Why Gamble When We Can Predict For You?</h3>
-            <p>Join millions who have discovered the smarter way to play with our AI-driven predictions</p>
+            <h3>Why Risk When Tipstar is Here?</h3>
         </div>
-        <div class="center-button">
+        <div class="feature">
+            <p><i class="fas fa-check-circle feature-icon"></i> Low risk selections</p>
+            <p><i class="fas fa-check-circle feature-icon"></i> Created for beginners who want simple, low-stress bets</p>
+            <p><i class="fas fa-check-circle feature-icon"></i> Designed for bettors tired of losing on multibets</p>
+            <p><i class="fas fa-check-circle feature-icon"></i> Made for bettors with small stake but want to make sizeable profit</p>
+        </div><div class="center-button">
             <button class="cta-button" onclick="trackButtonClick()">
                 <i class="fas fa-rocket"></i>
                 Start Now
@@ -2263,7 +2277,7 @@
     </section>
 
     <!-- How to Install -->
-    <section id="how-to-install" class="fade-in">
+    <section id="why-us" class="fade-in">
         <div class="section-header">
             <h2>Get Started in Minutes</h2>
             <p>Simple setup to start winning today</p>
@@ -2285,13 +2299,13 @@
                 <div class="step-number">3</div>
                 <i class="fas fa-crown step-icon"></i>
                 <h3>Choose Plan</h3>
-                <p>Select premium plan that fits your goals</p>
+                <p>Select a plan that fits your goals</p>
             </div>
             <div class="step-card">
                 <div class="step-number">4</div>
                 <i class="fas fa-trophy step-icon"></i>
                 <h3>Start Winning</h3>
-                <p>Access predictions and maximize your winnings</p>
+                <p>Access predictions and maximize your chances</p>
             </div>
         </div>
         <div class="cta-container">
